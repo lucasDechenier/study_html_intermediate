@@ -7,6 +7,88 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!--Criando formulários-->
+    <!--Caso esteja no mesmo domínio, use apenas a / no action, se tiver em diferentes tem que colocar o http-->
+    <!--No método get os dados são enviados pelo endereço, use o método post em senhas e informações sigilosas-->
+    <form method="GET" action="/cadastro">
+        <input type="text" name="email">
+        <input type="password" name="senha">
+        <input type="submit">
+
+        <!--Check box terá o name e o valor desse name para cada opção-->
+        <input type="checkbox" name = "curso" value ="op"> React Native <br>
+        <input type="checkbox" name = "curso" value ="op2"> React br <br>
+        <input type="checkbox" name = "curso" value ="op3"> React aa <br>
+
+        <!--Tipo radio só poderá ter uma opção selecionada-->
+
+        <input type="radio" name = "gender" value = "m"> masc <br>
+        <input type="radio" name = "gender" value = "F"> fem <br>
+        <input type="radio" name = "gender2" value = "ot" checked> ots <br>
+        <input type="reset" value= "limpar ">
+    </form>
+
+    <form method="GET" action="/aaa">
+        <select name="Estado" size="5" multiple>
+            <option value="RJ"> Rio de Janeiro</option>
+            <option value="SP" selected> São Paulo</option>
+        </select>
+        <input type="text" name="assunto">
+        <textarea name="mensagem" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+    <!--HTML5-->
+    <form method= "GET" action="/aaa">
+        <br>
+        <input type="color" name="cor">
+        <br>
+        <!--datetime-local-->
+        <input type="date" name="data" max="2021-12-15">
+        <br>
+
+        <!--Ao enviar arquivos, necessáriamente precisa ser método post-->
+        <input type="file" name="arquivo">
+        <br>
+        <input type="number" name="numero" min="5" max="10">
+        <br>
+        <input type="range" name="intervalo" min="5" max="10" value="6">
+        <br>
+
+        <!--input do tipo tel só funciona no celular-->
+        <input type="tel" name="telefone">
+        <br>
+        <!--Input do tipo email verifica se o email é válido-->
+        <input type="email" name="email">
+        <br>
+
+        <input type="submit">
+        <br>
+    </form>
+
+    <!--TAGS semânticas-->
+    <header>
+        Cabeçalho da página, comportamento igual a DIV, mas é semânticas--
+        <nav>
+            Aqui seria as opções de navegação
+            <ul> Exemplo 1</ul>
+
+        </nav>
+    </header>
+
+    <main>
+        Conteúdo principal da página, apenas uma por página
+    </main>
+
+    <footer>
+        rodapé, informações, CNPJ da empresa, etc
+    </footer>
+    <section>
+        seção do site, organização melhor
+    </section>
+    <article>
+        Artigo, conteúdo que faz sentido em qualquer lugar
+    </article>
+
+
 </body>
 </html>
